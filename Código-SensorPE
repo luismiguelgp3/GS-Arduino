@@ -1,0 +1,34 @@
+#include <DHT.h>
+
+#define DHTPIN 2       // Pino do DHT22 (digital)
+#define DHTTYPE DHT22  // Tipo do sensor
+DHT dht(DHTPIN, DHTTYPE);
+
+#define BUZZER_PIN 3   // Pino do buzzer
+#define POT_PIN A0     // Pino do potenciômetro
+
+void setup() {
+  Serial.begin(9600); // Inicio da comunicação serial
+  dht.begin(); // Inicia o sensor DHT22
+  pinMode(BUZZER_PIN, OUTPUT); // Define o buzzer como saída
+  digitalWrite(BUZZER_PIN, LOW); // Determina que o buzzer comece desligado
+}
+
+void loop() {
+  float umidade = dht.readHumidity(); // Faz a leitura da umidade
+  int levelAgua = analogRead(POT_PIN); // Faz a leitura do nivel da agua
+
+  Serial.print("Umidade: "); 
+  Serial.print(umidade); // Mostra o valor da umidade
+  Serial.print("% | Nível de água (simulado): ");
+  Serial.println(levelAgua); // Mostra o nivel da agua
+
+  // Condição de risco de enchente
+  if (umidade > 80 && levelAgua > 700) {
+    tone(BUZZER_PIN, 500); // Emite um som baixo (~500Hz)
+  } else {
+    noTone(BUZZER_PIN); // Não emite o som
+  }
+
+  delay(1000); // Espera 1 segundo para recalcular
+}
