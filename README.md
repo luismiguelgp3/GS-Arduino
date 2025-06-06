@@ -1,1 +1,9 @@
-# GS-Arduino
+A inovação abordada nesse projeto está buscando resolver a falta de alerta da população em relação as potenciais enchentes que podem ocorrer principalmente em épocas de chuva e conseguem ser avisadas antes mesmo de começarem a dar sinais visíveis de risco, e falta de auxilio do gorverno que adota medidas para remediar os problemas causados pelas enchentes e não para prevenir, ajudando a população a proteger suas casas e famílias.
+
+A nossa solução é um sensor que promete prevenir a população de enchentes a princípio por meio de alertas sonoros que são ativados quando os sensores de chuva e umidade medirem níveis altas ao ponto de considerarem que aquela região pode passar por uma potencial enchente. O nosso planejamento é que no futuro podemos analisar dados com mais precisão e implementar um sistema de notificação para que as pessoas possam ser alertadas independente de onde estiverem no momento do alarme.
+
+Para simular o nosso projeto no wokwi, precisa de um potenciometro, um buzzer, um DHT22, uma breadboard full e um arduino. 
+No breadboard, conecte o 5V do arduino no primeiro quadrado do sinal + e o GND no primeiro quadrado do sinal -. Para o potenciometro, conecte o GND em outro GND do arduino, o VCC em um dos quadrados na linha do sinal de +, e o SID no A0 do arduino. Para o buzzer, coloque ele no breadboard no lado onde os fios estão postos e conecte o quadrado abaixo do lado esquerdo dele na linha do sinal - e o quadrado abaixo dolado direito no digital 3. Para o DHT22, coloque ele no breadboard no lado onde os fios estão postos e conecte o quadrado abaixo do primeiro cabo do lado esquerdo dele na linha do sinal +, o quadrado abaixo do segundo cabo coloque no digital 2 do arduino e  o quadrado abaixo do quarto cabo na linha do sinal -.
+
+https://wokwi.com/projects/432772315678680065
+https://www.canva.com/design/DAGpiX1kKyI/xAi6qFJltB4JQ3SNNqivUA/edit?utm_content=DAGpiX1kKyI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
